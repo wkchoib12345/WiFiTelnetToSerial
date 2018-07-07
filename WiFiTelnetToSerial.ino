@@ -86,11 +86,12 @@ void loop() {
       if(serverClients[i].available()){
         //get data from the telnet client and push it to the UART
         while(serverClients[i].available()) Serial.write(serverClients[i].read());
-        Serial.print("ok");
+        
+
       }
     }
   }
-  
+  //테스트 커밋
   /* 시리얼 통신으로 데이터를 받을때 */
   if(Serial.available()){
     size_t len = Serial.available();
